@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class TelaCadastro extends StatefulWidget {
-  const TelaCadastro({super.key});
+class TelaForgotPass extends StatefulWidget {
+  const TelaForgotPass({super.key});
 
   @override
-  State<TelaCadastro> createState() => _TelaCadastroState();
+  State<TelaForgotPass> createState() => _TelaForgotPassState();
 }
 
-class _TelaCadastroState extends State<TelaCadastro> {
+class _TelaForgotPassState extends State<TelaForgotPass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,44 +29,21 @@ class _TelaCadastroState extends State<TelaCadastro> {
               ),
             ),
             SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Digite a sua senha',
-                labelStyle: TextStyle(fontSize: 18),
-                prefixIcon: Icon(Icons.lock),
-                border: OutlineInputBorder(),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Confirme a sua senha',
-                labelStyle: TextStyle(fontSize: 18),
-                prefixIcon: Icon(Icons.lock),
-                border: OutlineInputBorder(),
-              ),
-            ),
-            SizedBox(
-              height: 10,
+              height: 20,
             ),
             TextButton(
               style: ButtonStyle(
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                //textStyle: const TextStyle(fontSize: 20),
               ),
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: Text('Usuário cadastrado com sucesso!'),
+                    content: Text('Senha encaminhada por email com sucesso!'),
                     duration: Duration(seconds: 3),
                   ),
                 );
               },
-              child: Text('Cadastrar'),
+              child: Text('Recuperar senha'),
             ),
           ],
         ),

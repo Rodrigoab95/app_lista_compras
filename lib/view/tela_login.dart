@@ -13,7 +13,10 @@ class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      // backgroundColor: Colors.grey.shade200,
+      // appBar: AppBar(
+      //   title: Text('Tela de Login'),
+      // ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -50,7 +53,9 @@ class _TelaLoginState extends State<TelaLogin> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'cadastro');
+                  },
                   child: Text('Cadastre-se'),
                 ),
                 TextButton(
@@ -58,19 +63,23 @@ class _TelaLoginState extends State<TelaLogin> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'forgotpass');
+                  },
                   child: Text('Esqueci a senha'),
                 ),
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 20,
             ),
             TextButton(
               style: ButtonStyle(
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
               ),
-              onPressed: () {},
+              onPressed: () {
+                // Configurar para a tela de entrada
+              },
               child: Text('Entrar'),
             ),
           ],

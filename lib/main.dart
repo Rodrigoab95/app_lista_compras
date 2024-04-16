@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:app_lista_compras/view/tela_forgotpass.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +30,7 @@ class MainApp extends StatelessWidget {
       routes: {
         'login': (context) => TelaLogin(),
         'cadastro': (context) => TelaCadastro(),
+        'forgotpass': (context) => TelaForgotPass(),
       },
     );
   }
