@@ -14,6 +14,17 @@ class _TelaForgotPassState extends State<TelaForgotPass> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
+      appBar: AppBar(
+        title: Text('Esqueci a senha'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.question_mark_rounded),
+            onPressed: () {
+              Navigator.pushNamed(context, 'sobre');
+            },
+          ),
+        ],
+      ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -42,6 +53,7 @@ class _TelaForgotPassState extends State<TelaForgotPass> {
                     duration: Duration(seconds: 3),
                   ),
                 );
+                Navigator.pop(context);
               },
               child: Text('Recuperar senha'),
             ),

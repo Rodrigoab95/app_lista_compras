@@ -13,10 +13,18 @@ class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.grey.shade200,
-      // appBar: AppBar(
-      //   title: Text('Tela de Login'),
-      // ),
+      backgroundColor: Colors.grey.shade200,
+      appBar: AppBar(
+        title: Text('Faça seu Login'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.question_mark_rounded),
+            onPressed: () {
+              Navigator.pushNamed(context, 'sobre');
+            },
+          ),
+        ],
+      ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -41,6 +49,7 @@ class _TelaLoginState extends State<TelaLogin> {
                 prefixIcon: Icon(Icons.lock),
                 border: OutlineInputBorder(),
               ),
+              obscureText: true,
             ),
             SizedBox(
               height: 10,
