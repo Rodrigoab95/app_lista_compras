@@ -15,7 +15,7 @@ class _TelaForgotPassState extends State<TelaForgotPass> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
-        title: Text('Esqueci a senha'),
+        title: Text('Lista de Compras'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.question_mark_rounded),

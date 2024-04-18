@@ -61,11 +61,15 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           return ListTile(
             title: Text('${item.nome} (${item.quantidade})'),
             trailing: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: () => toggleItem(item),
-                ),
+                Checkbox(
+                    value: item.isPurchased,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        item.isPurchased = value!;
+                      });
+                    }),
                 IconButton(
                   icon: Icon(Icons.edit),
                   onPressed: () {
@@ -95,6 +99,12 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                             ],
                           ),
                           actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Cancelar'),
+                            ),
                             TextButton(
                               onPressed: () {
                                 editItem(item, novoNome, novaQuantidade);

@@ -15,13 +15,15 @@ class _TelaCadastroState extends State<TelaCadastro> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
-        title: Text('Faça seu cadastro'),
-        leading: IconButton(
-          icon: Icon(Icons.question_mark_rounded),
-          onPressed: () {
-            Navigator.pushNamed(context, 'sobre');
-          },
-        ),
+        title: Text('Lista de Compras'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.question_mark_rounded),
+            onPressed: () {
+              Navigator.pushNamed(context, 'sobre');
+            },
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.all(20),
@@ -76,6 +78,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     duration: Duration(seconds: 3),
                   ),
                 );
+                Navigator.pop(context);
               },
               child: Text('Cadastrar'),
             ),

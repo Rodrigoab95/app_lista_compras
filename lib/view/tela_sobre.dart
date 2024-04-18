@@ -14,12 +14,12 @@ class _TelaSobreState extends State<TelaSobre> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
-        title: Text('Sobre'),
+        title: Text('Lista de Compras'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.question_mark_rounded),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, 'sobre');
             },
           ),
         ],

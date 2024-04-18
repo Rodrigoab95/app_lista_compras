@@ -87,7 +87,13 @@ class _TelaLoginState extends State<TelaLogin> {
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
               ),
               onPressed: () {
-                // Configurar para a tela de entrada
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Login efetuado com sucesso!'),
+                    duration: Duration(seconds: 3),
+                  ),
+                );
+                Navigator.pushNamed(context, 'principal');
               },
               child: Text('Entrar'),
             ),
