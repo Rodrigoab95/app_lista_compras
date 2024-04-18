@@ -1,12 +1,12 @@
 class Item {
   //Atributos
-  final String name;
+  String nome;
   int quantidade;
   bool isPurchased;
 
   //Construtor
   Item({
-    required this.name,
+    required this.nome,
     this.quantidade = 1,
     this.isPurchased = false,
   });
